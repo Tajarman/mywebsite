@@ -97,4 +97,127 @@
             color: #2c3e50;
             margin-bottom: 0.5rem;
         }
-        .contact-card p
+        .contact-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .contact-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+        .consulting-section {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+        .consulting-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .consulting-section p {
+            color: #666;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .consulting-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        .consulting-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #666;
+        }
+        .consulting-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .contact-card {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Tajarobi</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Let's Connect</h1>
+        <p>Ready to discuss digital transformation, IM/IT strategy, or collaboration opportunities?</p>
+    </div>
+
+    <div class="content">
+        <p class="intro">
+            Whether you're looking for strategic guidance on information management, navigating digital transformation, or exploring how AI can drive better outcomes in your organization, I'd love to hear from you.
+        </p>
+
+        <div class="contact-options">
+            <div class="contact-card">
+                <div class="icon">📧</div>
+                <div>
+                    <h3>Email</h3>
+                    <p>For consulting inquiries or professional networking</p>
+                    <a href="mailto:Atajarobi@gmail.com">Atajarobi@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">💼</div>
+                <div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me to stay updated on insights and industry trends</p>
+                    <a href="https://www.linkedin.com/in/atajarobi" target="_blank">linkedin.com/in/atajarobi</a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📍</div>
+                <div>
+                    <h3>Location</h3>
+                    <p>Based in Ottawa, Ontario</p>
+                    <p>Ottawa Region | Available for remote consultations</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="consulting-section">
+            <h2>Consulting Services</h2>
+            <p>I offer strategic consulting and advisory services in the following areas:</p>
+            <ul class="consulting-list">
+                <li>Digital transformation strategy and implementation</li>
+                <li>Information management modernization</li>
+                <li>IM/IT governance and planning</li>
+                <li>AI and data analytics strategy</li>
+                <li>Business process reengineering</li>
+                <li>Change management and organizational development</li>
+                <li>Project management and execution</li>
+            </ul>
+            <p style="margin-top: 2rem;">
+                <strong>Interested in working together?</strong> Reach out via email to discuss your specific needs and how I can help.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
