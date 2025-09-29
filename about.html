@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tajarobi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        nav {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .intro {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+        .journey-section {
+            margin-bottom: 4rem;
+        }
+        .journey-section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #667eea;
+        }
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        .timeline-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-item .period {
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .timeline-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .value-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .value-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .timeline {
+                padding-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Tajarobi</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>My Journey</h1>
+        <p>From AI Innovation to Public Sector Leadership</p>
+    </div>
+
+    <div class="content">
+        <p class="intro">
+            I bring a unique perspective to digital transformation—one that combines hands-on technical expertise in artificial intelligence with strategic leadership in the public sector. My career has been driven by a passion for using technology to solve complex problems and deliver meaningful results.
+        </p>
+
+        <div class="journey-section">
+            <h2>The Path</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="period">2017 - Present</div>
+                    <h3>Department of National Defence</h3>
+                    <p>Leading Records and Data Management Services, providing direct support to military operations and managing the cyber environment for National Defence and the Canadian Armed Forces.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="period">2015 - 2017</div>
+                    <h3>Treasury Board & Department of Justice</h3>
+                    <p>Shaped IM/IT governance strategies, led business analysis teams implementing GCDOCS, and coordinated the alignment of IM/IT demand and supply across federal departments.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="period">2010 - 2015</div>
+                    <h3>Employment and Social Development Canada</h3>
+                    <p>Managed a team of 30+ employees delivering records management services, and developed departmental IM policy instruments supporting 25,000+ employees.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="period">2009 - 2010</div>
+                    <h3>Canada Border Services Agency</h3>
+                    <p>Led business analysis to develop intelligent risk assessment modules using AI to improve threat detection and streamline border operations.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="period">2000 - 2010</div>
+                    <h3>Private Sector Innovation</h3>
+                    <p>As Director of R&D at Nstein Technologies and founder of Linguistic Tecknowledgies, I developed cutting-edge solutions in text mining, enterprise search, machine translation, and AI—managing multidisciplinary teams and bringing innovative products to market.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="journey-section">
+            <h2>What Drives Me</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Collaboration</h3>
+                    <p>Building bridges between technical teams and business stakeholders</p>
+                </div>
+                <div class="value-card">
+                    <h3>Innovation</h3>
+                    <p>Finding creative solutions to complex challenges</p>
+                </div>
+                <div class="value-card">
+                    <h3>Integrity</h3>
+                    <p>Leading with ethics and accountability</p>
+                </div>
+                <div class="value-card">
+                    <h3>Results</h3>
+                    <p>Delivering outcomes that matter</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="journey-section">
+            <h2>The Unique Advantage</h2>
+            <p class="intro">
+                My background in developing AI and machine learning technologies gives me a distinct perspective when leading digital transformation initiatives. I understand both the technical possibilities and the organizational realities. This allows me to translate complex technical concepts into strategic initiatives that deliver real value—whether it's improving information management practices, implementing new technologies, or reengineering business processes for the digital age.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
