@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertise - Tajarobi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        nav {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .expertise-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+        .expertise-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .expertise-card h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .expertise-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .expertise-card li {
+            padding: 0.5rem 0;
+            color: #666;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .expertise-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        .skills-section {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            margin: 4rem -2rem 0;
+        }
+        .skills-section h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .skill-tag {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            color: #2c3e50;
+            font-weight: 500;
+            border-left: 4px solid #667eea;
+        }
+        @media (max-width: 768px) {
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Tajarobi</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Areas of Expertise</h1>
+        <p>Proven capabilities across technology, strategy, and leadership</p>
+    </div>
+
+    <div class="content">
+        <p class="intro">
+            With over 20 years spanning private sector innovation and public sector leadership, I bring deep expertise in digital transformation, AI technologies, and strategic information management.
+        </p>
+
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <div class="icon">🤖</div>
+                <h3>AI & Data Analytics</h3>
+                <p>Pioneering work in artificial intelligence and machine learning applications</p>
+                <ul>
+                    <li>Data mining and text analytics</li>
+                    <li>Business intelligence</li>
+                    <li>Enterprise search and information retrieval</li>
+                    <li>Automated classification and categorization</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">📊</div>
+                <h3>Information Management</h3>
+                <p>Leading-edge strategies for managing information as a strategic asset</p>
+                <ul>
+                    <li>Records and data management</li>
+                    <li>EDRMS implementation (GCDOCS, SharePoint)</li>
+                    <li>Information architecture and taxonomy</li>
+                    <li>Policy development and compliance</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">⚙️</div>
+                <h3>IT Governance</h3>
+                <p>Aligning technology investments with strategic objectives</p>
+                <ul>
+                    <li>IM/IT demand and supply coordination</li>
+                    <li>Strategic planning and reporting</li>
+                    <li>Risk and impact analysis</li>
+                    <li>Performance measurement frameworks</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">🚀</div>
+                <h3>Digital Transformation</h3>
+                <p>Guiding organizations through complex modernization initiatives</p>
+                <ul>
+                    <li>Change management and adoption strategies</li>
+                    <li>Business process reengineering</li>
+                    <li>Innovation and continuous improvement</li>
+                    <li>Open government and service delivery</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">📋</div>
+                <h3>Project Management</h3>
+                <p>Delivering complex initiatives on time and on budget</p>
+                <ul>
+                    <li>Multi-year transformational programs</li>
+                    <li>Stakeholder engagement and communication</li>
+                    <li>Resource planning and allocation</li>
+                    <li>Risk management and mitigation</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">👥</div>
+                <h3>Leadership & Management</h3>
+                <p>Building and empowering high-performing teams</p>
+                <ul>
+                    <li>Strategic thinking and decision-making</li>
+                    <li>Human and financial resources management</li>
+                    <li>Team development and mentoring</li>
+                    <li>Organizational effectiveness</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-section">
+        <h2>Core Competencies</h2>
+        <div class="skills-container">
+            <div class="skill-tag">Information Management</div>
+            <div class="skill-tag">IT Governance</div>
+            <div class="skill-tag">Project Management</div>
+            <div class="skill-tag">Data Mining & Analytics</div>
+            <div class="skill-tag">Business Intelligence</div>
+            <div class="skill-tag">Business Process Reengineering</div>
+            <div class="skill-tag">Service Management</div>
+            <div class="skill-tag">Innovation & Change Management</div>
+            <div class="skill-tag">Digital Transformation</div>
+            <div class="skill-tag">Strategic Thinking</div>
+            <div class="skill-tag">Leadership</div>
+            <div class="skill-tag">Written & Oral Communication</div>
+        </div>
+    </div>
+</body>
+</html>
