@@ -1,210 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tajarobi - Digital Transformation Leader</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        nav {
-            background: #2c3e50;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #3498db;
-        }
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        .hero .tagline {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            line-height: 1.8;
-        }
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: transform 0.3s;
-        }
-        .cta-button:hover {
-            transform: translateY(-3px);
-        }
-        .section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .highlight-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-        .highlight-card h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        .highlight-card p {
-            color: #666;
-        }
-        .stats {
-            background: #2c3e50;
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 2rem auto 0;
-        }
-        .stat-item h2 {
-            font-size: 3rem;
-            color: #3498db;
-            margin-bottom: 0.5rem;
-        }
-        .stat-item p {
-            font-size: 1.1rem;
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-            nav ul {
-                gap: 1rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arman Tajarobi - Digital Transformation Leader</title>
+  <meta name="description" content="Arman Tajarobi - Digital transformation leader: AI, information management, and public sector innovation." />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#333; line-height:1.6; background:#fff; }
+
+    /* NAV */
+    nav { background:#2c3e50; padding:1rem 0; position:sticky; top:0; z-index:100; box-shadow:0 2px 5px rgba(0,0,0,0.06); }
+    .nav-container { max-width:1200px; margin:0 auto; padding:0 1.5rem; display:flex; align-items:center; justify-content:space-between; }
+    .logo { color:#fff; font-weight:700; font-size:1.25rem; }
+    .menu-toggle { display:none; background:transparent; border:0; color:#fff; cursor:pointer; }
+    .menu-toggle .bar { display:block; width:22px; height:2px; background:#fff; margin:4px 0; border-radius:2px; }
+
+    nav ul { list-style:none; display:flex; gap:1.5rem; }
+    nav a { color:#fff; text-decoration:none; font-size:1rem; }
+    nav a:hover, nav a.active { color:#3498db; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:#fff; padding:5rem 1.5rem; text-align:center; }
+    .hero h1 { font-size:2.5rem; margin-bottom:.8rem; }
+    .subtitle { font-size:1.1rem; margin-bottom:1rem; opacity:0.95; }
+    .tagline { font-size:1rem; max-width:720px; margin:0 auto 1.5rem; line-height:1.6; }
+
+    .cta-button { display:inline-block; background:#fff; color:#667eea; padding:.85rem 1.6rem; border-radius:6px; font-weight:700; text-decoration:none; }
+
+    /* Sections */
+    .section { max-width:1200px; margin:0 auto; padding:3rem 1.5rem; }
+    .highlights { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.25rem; }
+    .highlight-card { background:#f8f9fa; padding:1.5rem; border-radius:10px; border-left:4px solid #667eea; }
+    .highlight-card h3 { margin-bottom:.6rem; color:#2c3e50; font-size:1.1rem; }
+    .highlight-card p { color:#666; font-size:.95rem; }
+
+    .stats { background:#2c3e50; color:#fff; padding:2.5rem 1.5rem; text-align:center; }
+    .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1rem; max-width:900px; margin:1rem auto 0; }
+    .stat-item h2 { font-size:2.2rem; color:#3498db; margin-bottom:.3rem; }
+    .stat-item p { font-size:1rem; color:#fff; }
+
+    /* Responsive */
+    @media (max-width:768px) {
+      .hero h1 { font-size:1.75rem; }
+      .menu-toggle { display:block; }
+      nav ul { display:none; position:absolute; right:16px; top:64px; background:#2c3e50; padding:1rem; flex-direction:column; gap:.75rem; border-radius:6px; }
+      nav ul.show { display:flex; }
+      .tagline { font-size:.95rem; }
+      .section { padding:2rem 1rem; }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <div class="logo">Tajarobi</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="expertise.html">Expertise</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Arman Tajarobi</div>
 
-    <div class="hero">
-        <h1>Bridging AI Innovation & Public Sector Excellence</h1>
-        <div class="subtitle">Digital Transformation Leader | Information Management Expert</div>
-        <p class="tagline">
-            Combining cutting-edge AI and machine learning expertise with proven public sector leadership to drive meaningful digital transformation.
-        </p>
-        <a href="contact.html" class="cta-button">Let's Connect</a>
-    </div>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
 
-    <div class="section">
-        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2rem; color: #2c3e50;">What I Bring to the Table</h2>
-        <div class="highlights">
-            <div class="highlight-card">
-                <h3>🤖 AI & Innovation</h3>
-                <p>Deep technical background in artificial intelligence, machine learning, text mining, and enterprise search from leading R&D roles in the private sector.</p>
-            </div>
-            <div class="highlight-card">
-                <h3>🎯 Strategic Leadership</h3>
-                <p>8+ years guiding transformational IM/IT initiatives across multiple federal departments, from strategy to successful implementation.</p>
-            </div>
-            <div class="highlight-card">
-                <h3>🔄 Change Management</h3>
-                <p>Expert at turning complex technical concepts into actionable strategies that deliver real results and organizational value.</p>
-            </div>
-        </div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <div class="stats">
-        <h2 style="margin-bottom: 1rem;">Experience at a Glance</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <h2>20+</h2>
-                <p>Years of Experience</p>
-            </div>
-            <div class="stat-item">
-                <h2>7</h2>
-                <p>Federal Departments</p>
-            </div>
-            <div class="stat-item">
-                <h2>30+</h2>
-                <p>Team Members Led</p>
-            </div>
-        </div>
-    </div>
+  <header class="hero">
+    <h1>Bridging AI Innovation & Public Sector Excellence</h1>
+    <div class="subtitle">Digital Transformation Leader | Information Management Expert</div>
+    <p class="tagline">Combining cutting-edge AI and machine learning expertise with proven public sector leadership to drive meaningful digital transformation.</p>
+    <a class="cta-button" href="contact.html">Let's Connect</a>
+  </header>
 
-    <div class="section" style="text-align: center; background: #f8f9fa; margin: 0; max-width: 100%;">
-        <h2 style="margin-bottom: 1rem; color: #2c3e50;">Ready to Collaborate?</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666;">Whether you're looking to modernize IM practices, navigate digital transformation, or leverage AI for better outcomes, let's talk.</p>
-        <a href="contact.html" class="cta-button">Get in Touch</a>
+  <section class="section">
+    <h2 style="text-align:center; color:#2c3e50; margin-bottom:1rem;">What I Bring to the Table</h2>
+    <div class="highlights">
+      <div class="highlight-card">
+        <h3>🤖 AI & Innovation</h3>
+        <p>Deep technical background in artificial intelligence, machine learning, text mining, and enterprise search from leading R&amp;D roles in the private sector.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>🎯 Strategic Leadership</h3>
+        <p>8+ years guiding transformational IM/IT initiatives across multiple federal departments, from strategy to successful implementation.</p>
+      </div>
+      <div class="highlight-card">
+        <h3>🔄 Change Management</h3>
+        <p>Expert at turning complex technical concepts into actionable strategies that deliver real results and organizational value.</p>
+      </div>
     </div>
+  </section>
+
+  <section class="stats">
+    <h2 style="margin-bottom:.5rem;">Experience at a Glance</h2>
+    <div class="stats-grid">
+      <div class="stat-item"><h2>20+</h2><p>Years of Experience</p></div>
+      <div class="stat-item"><h2>7</h2><p>Federal Departments</p></div>
+      <div class="stat-item"><h2>30+</h2><p>Team Members Led</p></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#f8f9fa; text-align:center;">
+    <h2 style="color:#2c3e50;">Ready to Collaborate?</h2>
+    <p style="color:#666; max-width:800px; margin:0.5rem auto 1rem;">Whether you're looking to modernize IM practices, navigate digital transformation, or leverage AI for better outcomes, let's talk.</p>
+    <a class="cta-button" href="contact.html">Get in Touch</a>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('nav ul');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function () {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', (!expanded).toString());
+        menu.classList.toggle('show');
+      });
+    });
+  </script>
 </body>
 </html>
