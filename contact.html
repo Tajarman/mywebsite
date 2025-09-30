@@ -1,121 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact - Arman Tajarobi</title>
-  <meta name="description" content="Contact Arman Tajarobi for consulting on digital transformation, IM/IT strategy, and AI advisory." />
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#333; line-height:1.6; }
-    nav { background:#2c3e50; padding:1rem 0; position:sticky; top:0; z-index:100; }
-    .nav-container { max-width:1200px; margin:0 auto; padding:0 1.5rem; display:flex; align-items:center; justify-content:space-between; }
-    .logo { color:#fff; font-weight:700; font-size:1.25rem; }
-    .menu-toggle { display:none; background:transparent; border:0; color:#fff; cursor:pointer; }
-    .menu-toggle .bar { width:22px; height:2px; background:#fff; display:block; margin:4px 0; border-radius:2px; }
-    nav ul { list-style:none; display:flex; gap:1.5rem; }
-    nav a { color:#fff; text-decoration:none; }
-    nav a:hover, nav a.active { color:#3498db; }
-
-    .page-header { background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; padding:3.5rem 1.5rem; text-align:center; }
-    .content { max-width:800px; margin:0 auto; padding:2.5rem 1.5rem; }
-    .intro { text-align:center; font-size:1.05rem; color:#666; margin-bottom:1.25rem; }
-    .contact-options { display:grid; gap:1rem; margin-top:1.25rem; }
-    .contact-card { background:#f8f9fa; padding:1rem; border-radius:10px; border-left:4px solid #667eea; display:flex; gap:1rem; align-items:flex-start; }
-    .contact-card .icon { font-size:1.4rem; color:#667eea; flex-shrink:0; }
-    .contact-card h3 { margin:0; color:#2c3e50; }
-    .contact-card p { margin:.25rem 0 0 0; color:#666; }
-    .contact-card a { color:#667eea; text-decoration:none; font-weight:600; }
-    .consulting-section { margin-top:1.5rem; border:2px solid #667eea; border-radius:10px; padding:1rem; background:#fff; }
-    .cta-btn { display:inline-block; background:#667eea; color:#fff; padding:.6rem 1rem; border-radius:6px; text-decoration:none; font-weight:600; }
-    form { display:flex; flex-direction:column; gap:.5rem; margin-top:.75rem; }
-    input, textarea { padding:.6rem; border:1px solid #ddd; border-radius:6px; width:100%; }
-    button { padding:.7rem; background:#667eea; color:#fff; border:0; border-radius:6px; cursor:pointer; font-weight:600; }
-    @media (max-width:768px) {
-      .menu-toggle { display:block; }
-      nav ul { display:none; position:absolute; right:16px; top:64px; background:#2c3e50; padding:1rem; border-radius:6px; flex-direction:column; gap:.7rem; }
-      nav ul.show { display:flex; }
-      .contact-card { flex-direction:column; align-items:center; text-align:center; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Your Name</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo">Arman Tajarobi</div>
-      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+  <header>
+    <div class="logo">Your Logo</div>
+    <nav>
+      <i class="fas fa-bars menu-toggle"></i>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="expertise.html">Expertise</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
-    </div>
-  </nav>
-
-  <header class="page-header">
-    <h1>Let's Connect</h1>
-    <p>Ready to discuss digital transformation, IM/IT strategy, or collaboration opportunities?</p>
+    </nav>
   </header>
 
-  <main class="content">
-    <p class="intro">Whether you're looking for strategic guidance on information management, navigating digital transformation, or exploring how AI can drive better outcomes in your organization, I'd love to hear from you.</p>
+  <main>
+    <section class="contact">
+      <h1>Contact Me</h1>
+      <p>If you’d like to get in touch, use the form below or email me directly.</p>
+      
+      <form action="mailto:your@email.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <div class="contact-options">
-      <div class="contact-card">
-        <div class="icon">📧</div>
-        <div>
-          <h3>Email</h3>
-          <p><a href="mailto:contact@tajarobi.ca">contact@tajarobi.ca</a></p>
-        </div>
-      </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-      <div class="contact-card">
-        <div class="icon">💼</div>
-        <div>
-          <h3>LinkedIn</h3>
-          <p><a href="https://www.linkedin.com/in/tajarobi" target="_blank" rel="noopener">linkedin.com/in/tajarobi</a></p>
-        </div>
-      </div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-      <div class="contact-card">
-        <div class="icon">📍</div>
-        <div>
-          <h3>Location</h3>
-          <p>Based in Ottawa, Ontario - Available for remote consultations</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="consulting-section">
-      <h2>Consulting Services</h2>
-      <p>I offer strategic consulting and advisory services in the following areas:</p>
-      <ul style="margin:.75rem 0 0 1rem; color:#444;">
-        <li>Digital transformation strategy and implementation</li>
-        <li>Information management modernization</li>
-        <li>IM/IT governance and planning</li>
-        <li>AI and data analytics strategy</li>
-        <li>Business process reengineering</li>
-        <li>Change management and organizational development</li>
-        <li>Project management and execution</li>
-      </ul>
-
-      <div style="text-align:center; margin-top:.75rem;">
-        <a class="cta-btn" href="mailto:contact@tajarobi.ca">Contact Me</a>
-      </div>
-    </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </main>
 
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggle = document.querySelector('.menu-toggle');
-      const menu = document.querySelector('nav ul');
-      if (!toggle || !menu) return;
-      toggle.addEventListener('click', function () {
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', (!expanded).toString());
-        menu.classList.toggle('show');
-      });
+    document.addEventListener("DOMContentLoaded", function() {
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector("nav ul");
+      if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+          menu.classList.toggle("show");
+        });
+      }
     });
   </script>
 </body>
