@@ -8,22 +8,65 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+    body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
 
     /* Navbar */
-    nav { background: #2c3e50; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
-    nav .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-    nav .logo { color: white; font-size: 1.5rem; font-weight: bold; }
-    nav ul { list-style: none; display: flex; gap: 2rem; }
-    nav a { color: white; text-decoration: none; transition: color 0.3s; }
-    nav a:hover { color: #3498db; }
-    .menu-toggle { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
+    nav { background: #2c3e50; padding: 1rem; }
+    nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    nav .logo { color: #fff; font-weight: bold; font-size: 1.2rem; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav a { color: #fff; text-decoration: none; }
+    .menu-toggle { display: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
 
     @media (max-width: 768px) {
-      nav ul { display: none; flex-direction: column; background: #2c3e50; position: absolute; top: 60px; right: 20px; width: 200px; padding: 1rem; border-radius: 8px; }
+      nav ul { display: none; flex-direction: column; background: #2c3e50; position: absolute; top: 60px; right: 20px; padding: 1rem; border-radius: 8px; }
       nav ul.show { display: flex; }
       .menu-toggle { display: block; }
     }
 
     /* Hero */
-    .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6rem 2rem; text-align: center;
+    .hero { background: linear-gradient(135deg, #667eea, #764ba2); color: white; text-align: center; padding: 5rem 2rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+
+    /* Content */
+    .content { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; text-align: center; }
+    .content h2 { color: #2c3e50; margin-bottom: 1rem; }
+    .cta-button { display: inline-block; margin-top: 1rem; background: #667eea; color: white; padding: 0.8rem 1.6rem; border-radius: 6px; text-decoration: none; }
+    .cta-button:hover { background: #5563c1; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">Arman Tajarobi</div>
+      <i class="fas fa-bars menu-toggle"></i>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Welcome</h1>
+    <p>Bridging AI innovation and public sector leadership with impact-driven transformation.</p>
+  </header>
+
+  <main class="content">
+    <h2>Driving Digital Transformation</h2>
+    <p>I help organizations modernize information management, leverage AI, and align IM/IT strategies with real-world impact.</p>
+    <a href="contact.html" class="cta-button">Work With Me</a>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector("nav ul");
+      toggle.addEventListener("click", () => menu.classList.toggle("show"));
+    });
+  </script>
+</body>
+</html>
