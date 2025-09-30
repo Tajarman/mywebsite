@@ -1,72 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Arman Tajarobi</title>
-  <meta name="description" content="Arman Tajarobi - Digital Transformation, IM/IT Strategy, and AI Leadership." />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
-
-    /* Navbar */
-    nav { background: #2c3e50; padding: 1rem; }
-    nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    nav .logo { color: #fff; font-weight: bold; font-size: 1.2rem; }
-    nav ul { list-style: none; display: flex; gap: 1.5rem; }
-    nav a { color: #fff; text-decoration: none; }
-    .menu-toggle { display: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
-
-    @media (max-width: 768px) {
-      nav ul { display: none; flex-direction: column; background: #2c3e50; position: absolute; top: 60px; right: 20px; padding: 1rem; border-radius: 8px; }
-      nav ul.show { display: flex; }
-      .menu-toggle { display: block; }
-    }
-
-    /* Hero */
-    .hero { background: linear-gradient(135deg, #667eea, #764ba2); color: white; text-align: center; padding: 5rem 2rem; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
-
-    /* Content */
-    .content { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; text-align: center; }
-    .content h2 { color: #2c3e50; margin-bottom: 1rem; }
-    .cta-button { display: inline-block; margin-top: 1rem; background: #667eea; color: white; padding: 0.8rem 1.6rem; border-radius: 6px; text-decoration: none; }
-    .cta-button:hover { background: #5563c1; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajarobi - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+        nav a:hover {
+            opacity: 0.7;
+        }
+        .container {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-  <nav>
+    <nav>
+        <div class="logo">Tajarobi</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-      <div class="logo">Arman Tajarobi</div>
-      <i class="fas fa-bars menu-toggle"></i>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="expertise.html">Expertise</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <h1>Welcome to Tajarobi.ca</h1>
+        <p>Your trusted partner for excellence.</p>
     </div>
-  </nav>
-
-  <header class="hero">
-    <h1>Welcome</h1>
-    <p>Bridging AI innovation and public sector leadership with impact-driven transformation.</p>
-  </header>
-
-  <main class="content">
-    <h2>Driving Digital Transformation</h2>
-    <p>I help organizations modernize information management, leverage AI, and align IM/IT strategies with real-world impact.</p>
-    <a href="contact.html" class="cta-button">Work With Me</a>
-  </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.querySelector(".menu-toggle");
-      const menu = document.querySelector("nav ul");
-      toggle.addEventListener("click", () => menu.classList.toggle("show"));
-    });
-  </script>
 </body>
 </html>
