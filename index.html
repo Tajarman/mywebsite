@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index Test - Arman Tajarobi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Arman Tajarobi</title>
+  <meta name="description" content="Arman Tajarobi - Digital Transformation, IM/IT Strategy, and AI Leadership." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body { font-family: sans-serif; padding: 2rem; }
-    h1 { color: darkblue; }
-  </style>
-</head>
-<body>
-  <h1>Index Test Page</h1>
-  <p>If you see this, the page loads fine. That means the problem is in the extra CSS/JS we added earlier.</p>
-</body>
-</html>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+
+    /* Navbar */
+    nav { background: #2c3e50; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+    nav .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+    nav .logo { color: white; font-size: 1.5rem; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav a { color: white; text-decoration: none; transition: color 0.3s; }
+    nav a:hover { color: #3498db; }
+    .menu-toggle { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; background: #2c3e50; position: absolute; top: 60px; right: 20px; width: 200px; padding: 1rem; border-radius: 8px; }
+      nav ul.show { display: flex; }
+      .menu-toggle { display: block; }
+    }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 6rem 2rem; text-align: center;
