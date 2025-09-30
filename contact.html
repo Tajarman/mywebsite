@@ -1,223 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Tajarobi</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        nav {
-            background: #2c3e50;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #3498db;
-        }
-        .page-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        .intro {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-        .contact-options {
-            display: grid;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .contact-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            transition: transform 0.3s;
-        }
-        .contact-card:hover {
-            transform: translateX(5px);
-        }
-        .contact-card .icon {
-            font-size: 2rem;
-            color: #667eea;
-        }
-        .contact-card h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-        .contact-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-        .contact-card a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .contact-card a:hover {
-            text-decoration: underline;
-        }
-        .consulting-section {
-            background: white;
-            border: 2px solid #667eea;
-            border-radius: 10px;
-            padding: 2.5rem;
-            margin-top: 3rem;
-        }
-        .consulting-section h2 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        .consulting-section p {
-            color: #666;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .consulting-list {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-        .consulting-list li {
-            padding: 0.5rem 0;
-            padding-left: 2rem;
-            position: relative;
-            color: #666;
-        }
-        .consulting-list li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-        @media (max-width: 768px) {
-            .contact-card {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Arman Tajarobi</title>
+  <meta name="description" content="Contact Arman Tajarobi for consulting on digital transformation, IM/IT strategy, AI adoption, and organizational development.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fafafa;
+    }
+    nav {
+      background: #2c3e50;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #3498db;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+    .page-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+    .contact-options {
+      display: grid;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .contact-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      border-left: 4px solid #667eea;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .contact-card:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .contact-card .icon {
+      font-size: 2rem;
+      color: #667eea;
+      flex-shrink: 0;
+    }
+    .contact-card h3 {
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+    .contact-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+    .contact-card a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+    .consulting-section {
+      background: white;
+      border: 2px solid #667eea;
+      border-radius: 10px;
+      padding: 2.5rem;
+      margin-top: 4rem;
+    }
+    .consulting-section h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .consulting-section p {
+      color: #666;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .consulting-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    .consulting-list li {
+      padding: 0.5rem 0;
+      padding-left: 2rem;
+      position: relative;
+      color: #555;
+    }
+    .consulting-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: bold;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 2rem;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .cta-btn:hover {
+      background: #5563d6;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #2c3e50;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 6px;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .contact-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <div class="logo">Tajarobi</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="expertise.html">Expertise</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav>
+    <div class="container">
+      <div class="logo">Arman Tajarobi</div>
+      <i class="fas fa-bars menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')"></i>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="expertise.html">Expertise</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="page-header">
-        <h1>Let's Connect</h1>
-        <p>Ready to discuss digital transformation, IM/IT strategy, or collaboration opportunities?</p>
+  <div class="page-header">
+    <h1>Let's Connect</h1>
+    <p>Ready to discuss digital transformation, IM/IT strategy, or collaboration opportunities?</p>
+  </div>
+
+  <div class="content">
+    <p class="intro">
+      Whether you're looking for strategic guidance on information management, navigating digital transformation, or exploring how AI can drive better outcomes in your organization, I'd love to hear from you.
+    </p>
+
+    <div class="contact-options">
+      <div class="contact-card">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <div>
+          <h3>Email</h3>
+          <p>For consulting inquiries or professional networking</p>
+          <a href="mailto:contact@tajarobi.ca">contact@tajarobi.ca</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon"><i class="fab fa-linkedin"></i></div>
+        <div>
+          <h3>LinkedIn</h3>
+          <p>Connect with me to stay updated on insights and industry trends</p>
+          <a href="https://www.linkedin.com/in/tajarobi" target="_blank">linkedin.com/in/tajarobi</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <h3>Location</h3>
+          <p>Based in Ottawa, Ontario</p>
+          <p>Ottawa Region | Available for remote consultations</p>
+        </div>
+      </div>
     </div>
 
-    <div class="content">
-        <p class="intro">
-            Whether you're looking for strategic guidance on information management, navigating digital transformation, or exploring how AI can drive better outcomes in your organization, I'd love to hear from you.
-        </p>
-
-        <div class="contact-options">
-            <div class="contact-card">
-                <div class="icon">📧</div>
-                <div>
-                    <h3>Email</h3>
-                    <p>For consulting inquiries or professional networking</p>
-                    <a href="mailto:contact@tajarobi.ca">contact@tajarobi.ca</a>
-                </div>
-            </div>
-
-            <div class="contact-card">
-                <div class="icon">💼</div>
-                <div>
-                    <h3>LinkedIn</h3>
-                    <p>Connect with me to stay updated on insights and industry trends</p>
-                    <a href="https://www.linkedin.com/in/tajarobi" target="_blank">linkedin.com/in/tajarobi</a>
-                </div>
-            </div>
-
-            <div class="contact-card">
-                <div class="icon">📍</div>
-                <div>
-                    <h3>Location</h3>
-                    <p>Based in Ottawa, Ontario</p>
-                    <p>Ottawa Region | Available for remote consultations</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="consulting-section">
-            <h2>Consulting Services</h2>
-            <p>I offer strategic consulting and advisory services in the following areas:</p>
-            <ul class="consulting-list">
-                <li>Digital transformation strategy and implementation</li>
-                <li>Information management modernization</li>
-                <li>IM/IT governance and planning</li>
-                <li>AI and data analytics strategy</li>
-                <li>Business process reengineering</li>
-                <li>Change management and organizational development</li>
-                <li>Project management and execution</li>
-            </ul>
-            <p style="margin-top: 2rem;">
-                <strong>Interested in working together?</strong> Reach out via email to discuss your specific needs and how I can help.
-            </p>
-        </div>
+    <div class="consulting-section">
+      <h2>Consulting Services</h2>
+      <p>I offer strategic consulting and advisory services in the following areas:</p>
+      <ul class="consulting-list">
+        <li>Digital transformation strategy and implementation</li>
+        <li>Information management modernization</li>
+        <li>IM/IT governance and planning</li>
+        <li>AI and data analytics strategy</li>
+        <li>Business process reengineering</li>
+        <li>Change management and organizational development</li>
+        <li>Project management and execution</li>
+      </ul>
+      <div style="text-align:center;">
+        <a href="mailto:contact@tajarobi.ca" class="cta-btn">Contact Me</a>
+      </div>
     </div>
+  </div>
 </body>
 </html>
